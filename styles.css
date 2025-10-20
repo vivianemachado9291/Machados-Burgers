@@ -1,0 +1,7 @@
+.elemento-animado{will-change:transform;transform:translateZ(0);}
+.imagem-responsiva{width:100%;height:auto;object-fit:cover;}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important;}}
+.hidden{display:none!important;}
+.center{display:grid;place-items:center;}
+.rounded{border-radius:var(--radius);}
+.shadow{box-shadow:var(--shadow-sm);}
