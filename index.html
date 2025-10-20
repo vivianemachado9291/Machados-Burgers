@@ -1,112 +1,39 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Machados Burgers — Início</title>
+<section class="container">
+  <h2>Mais pedidos</h2>
+  <div class="grid-12 gap-lg">
 
-  <!-- CSS do projeto -->
-  <link rel="stylesheet" href="css/reset.css" />
-  <link rel="stylesheet" href="css/variables.css" />
-  <link rel="stylesheet" href="css/layout.css" />
-  <link rel="stylesheet" href="css/components.css" />
-  <link rel="stylesheet" href="css/styles.css" />
-</head>
-<body class="layout">
-
-  <!-- Header / Navegação -->
-  <header class="header">
-    <a class="brand" href="index.html">
-      <img src="img/logo.svg" alt="Logo Machados Burgers" class="brand-logo" />
-      <span class="brand-title">Machados Burgers</span>
-    </a>
-    <button class="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
-    <nav class="menu" id="menu" aria-label="Menu principal">
-      <ul class="menu-lista">
-        <li class="menu-item"><a class="menu-link" href="index.html">Início</a></li>
-        <li class="menu-item">
-          <a class="menu-link" href="cardapio.html">Cardápio</a>
-        </li>
-        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero container">
-    <div class="grid-12 gap-lg">
-      <div class="col-12 col-lg-7">
-        <h1>Smash artesanal com <span style="color:var(--cor-primaria)">sabor de verdade</span></h1>
-        <p>Receitas exclusivas, ingredientes frescos e um cardápio pensado para você.</p>
-        <a class="botao botao-primario" href="cardapio.html">Ver cardápio</a>
+    <article class="card col-12 col-md-6 col-lg-4">
+      <div class="card__media ratio-16x9">
+        <img src="img/cards/classico.jpg" alt="Smash Clássico">
       </div>
-    </div>
-  </section>
+      <div class="card__body">
+        <h3 class="card__title">Smash Clássico</h3>
+        <p class="card__text">Carne 100g, queijo prato, picles, molho da casa.</p>
+        <div class="tags"><span class="badge">Promo</span><span class="badge badge-info">180g</span></div>
+      </div>
+    </article>
 
-  <!-- Mais pedidos -->
-  <section class="container">
-    <h2>Mais pedidos</h2>
+    <article class="card col-12 col-md-6 col-lg-4">
+      <div class="card__media ratio-16x9">
+        <img src="img/cards/cheddar-bacon.jpg" alt="Cheddar Bacon">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Cheddar Bacon</h3>
+        <p class="card__text">Cheddar cremoso, bacon crocante, cebola caramelizada.</p>
+        <div class="tags"><span class="badge badge-warning">Novo</span><span class="badge badge-info">200g</span></div>
+      </div>
+    </article>
 
-    <div class="grid-12 gap-lg">
+    <article class="card col-12 col-md-6 col-lg-4">
+      <div class="card__media ratio-16x9">
+        <img src="img/cards/veggie.jpg" alt="Veggie Special">
+      </div>
+      <div class="card__body">
+        <h3 class="card__title">Veggie Special</h3>
+        <p class="card__text">Grão-de-bico, especiarias, maionese verde.</p>
+        <div class="tags"><span class="badge badge-success">Veggie</span><span class="badge badge-info">150g</span></div>
+      </div>
+    </article>
 
-      <!-- Smash Clássico -->
-      <article class="card col-12 col-md-6 col-lg-4">
-        <div class="card__media ratio-16x9">
-          <img src="img/cards/classico.jpg" alt="Smash Clássico">
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Smash Clássico</h3>
-          <p class="card__text">Carne 100g, queijo prato, picles, molho da casa.</p>
-          <div class="tags">
-            <span class="badge">Promo</span>
-            <span class="badge badge-info">180g</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Cheddar Bacon -->
-      <article class="card col-12 col-md-6 col-lg-4">
-        <div class="card__media ratio-16x9">
-          <img src="img/cards/cheddar-bacon.jpg" alt="Cheddar Bacon">
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Cheddar Bacon</h3>
-          <p class="card__text">Cheddar cremoso, bacon crocante, cebola caramelizada.</p>
-          <div class="tags">
-            <span class="badge badge-warning">Novo</span>
-            <span class="badge badge-info">200g</span>
-          </div>
-        </div>
-      </article>
-
-      <!-- Veggie Special -->
-      <article class="card col-12 col-md-6 col-lg-4">
-        <div class="card__media ratio-16x9">
-          <img src="img/cards/veggie.jpg" alt="Veggie Special">
-        </div>
-        <div class="card__body">
-          <h3 class="card__title">Veggie Special</h3>
-          <p class="card__text">Grão-de-bico, especiarias, maionese verde.</p>
-          <div class="tags">
-            <span class="badge badge-success">Veggie</span>
-            <span class="badge badge-info">150g</span>
-          </div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="container" style="margin-block:3rem">
-    <a class="botao botao-primario" href="cardapio.html">Pedir agora</a>
-  </section>
-
-  <!-- Rodapé -->
-  <footer class="footer">
-    <p>© 2025 — Machados Burgers</p>
-  </footer>
-
-  <script src="js/main.js"></script>
-</body>
-</html>
+  </div>
+</section>
