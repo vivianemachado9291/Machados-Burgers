@@ -46,27 +46,6 @@ O objetivo foi transformar a estrutura HTML inicial em uma interface **visual pr
 
 ---
 
-## 📂 Estrutura de pastas
-Machados-Burgers/
-├── index.html
-├── cardapio.html
-├── contato.html
-├── css/
-│ ├── reset.css
-│ ├── variables.css
-│ ├── layout.css
-│ ├── components.css
-│ └── styles.css
-├── img/
-│ ├── logo.svg
-│ └── cards/ (todas as imagens do cardápio)
-├── js/
-│ └── main.js
-└── README.md
-
-
----
-
 ## 👩‍💻 Autoria
 Projeto desenvolvido por **Viviane Machado**  
 Estudante de **Análise e Desenvolvimento de Sistemas**
