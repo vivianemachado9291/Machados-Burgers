@@ -1,6 +1,4 @@
-/* ======= BASE MINIMA PARA VOLTAR O LAYOUT ======= */
-
-/* Variáveis de segurança (caso faltem em outro arquivo) */
+/* === Base mínima p/ layout e cards === */
 :root{
   --cor-primaria:#e74c3c;
   --cor-secundaria:#2c3e50;
@@ -8,105 +6,41 @@
   --radius:12px;
   --shadow-sm:0 4px 14px rgba(0,0,0,.06);
   --shadow-md:0 10px 30px rgba(0,0,0,.12);
-  --esp-1:.75rem;
-  --esp-2:1rem;
 }
 
-/* Tipografia e fundo geral */
-body{
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-  line-height:1.5;
-  color:#333;
-  background:#fff7ef; /* seu tom creminho */
-  margin:0;
-}
+/* Fundo e tipografia */
+body{ margin:0; font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif; color:#333; background:#fff7ef; }
 
-/* Container centralizado */
-.container{
-  max-width:1200px;
-  margin:0 auto;
-  padding:0 16px;
-}
+/* Container central */
+.container{ max-width:1200px; margin:0 auto; padding:0 16px; }
 
-/* GRID 12 colunas responsivo */
-.grid-12{ display:grid; grid-template-columns:repeat(12, minmax(0,1fr)); gap:1.5rem; }
-.col-12{ grid-column: span 12; }
-.col-6 { grid-column: span 6; }
-.col-4 { grid-column: span 4; }
-.col-3 { grid-column: span 3; }
-
-@media (min-width:768px){
-  .col-md-6{ grid-column: span 6; }
-  .col-md-4{ grid-column: span 4; }
-}
-@media (min-width:1024px){
-  .col-lg-4{ grid-column: span 4; }
-  .col-lg-3{ grid-column: span 3; }
-}
+/* Grid 12 colunas */
+.grid-12{ display:grid; grid-template-columns:repeat(12,minmax(0,1fr)); gap:1.5rem; }
+.col-12{ grid-column:span 12; } .col-6{ grid-column:span 6; } .col-4{ grid-column:span 4; }
+@media (min-width:768px){ .col-md-6{grid-column:span 6;} .col-md-4{grid-column:span 4;} }
+@media (min-width:1024px){ .col-lg-4{grid-column:span 4;} .col-lg-3{grid-column:span 3;} }
 
 /* Cards */
-.card{
-  background:var(--cor-branco);
-  border-radius:var(--radius);
-  box-shadow:var(--shadow-sm);
-  overflow:hidden;
-  transition:.2s ease;
-}
+.card{ background:var(--cor-branco); border-radius:var(--radius); box-shadow:var(--shadow-sm); overflow:hidden; transition:.2s; }
 .card:hover{ transform:translateY(-3px); box-shadow:var(--shadow-md); }
-
-.card__body{ padding:var(--esp-2); }
-.card__title{ font-weight:700; margin:0 0 .5rem; }
+.card__body{ padding:16px; }
+.card__title{ margin:0 0 .5rem; font-weight:700; }
 .card__text{ margin:0 0 .75rem; color:#555; }
 
-/* Imagem do card com proporção fixa */
+/* Imagem com proporção fixa 16:9 */
 .ratio-16x9{ position:relative; width:100%; padding-top:56.25%; overflow:hidden; }
-.ratio-16x9 img{
-  position:absolute; inset:0;
-  width:100%; height:100%;
-  object-fit:cover;
-}
+.ratio-16x9 img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; display:block; }
 
-/* Badges simples */
-.badge{
-  display:inline-block;
-  padding:4px 10px;
-  border-radius:999px;
-  font-size:.8rem;
-  background:#eef2ff;
-  color:#1f3a8a;
-  margin-right:6px;
-}
-.badge-info{ background:#eaf5ff; color:#155e75; }
-.badge-success{ background:#e8f8f0; color:#166534; }
-.badge-warning{ background:#fff3d6; color:#92400e; }
+/* Badges e botão */
+.badge{ display:inline-block; padding:4px 10px; border-radius:999px; font-size:.8rem; background:#eef2ff; color:#1f3a8a; margin-right:6px; }
+.badge-info{ background:#eaf5ff; color:#155e75; } .badge-success{ background:#e8f8f0; color:#166534; } .badge-warning{ background:#fff3d6; color:#92400e; }
+.botao{ display:inline-flex; align-items:center; justify-content:center; padding:.8rem 1.2rem; border:0; border-radius:10px; cursor:pointer; font-weight:700; background:linear-gradient(135deg,#e74c3c,#9b59b6); color:#fff; }
 
-/* Botão primário */
-.botao{ display:inline-flex; align-items:center; justify-content:center;
-  padding:.8rem 1.2rem; border:0; border-radius:10px; cursor:pointer; font-weight:700;
-  background:linear-gradient(135deg, #e74c3c, #9b59b6); color:#fff; }
-
-/* Header/rodapé (básico) */
-.header, .footer{ background:#fff; box-shadow:var(--shadow-sm); }
-.header{ position:sticky; top:0; z-index:50; }
-.header .container, .footer .container{ padding:1rem 16px; display:flex; align-items:center; gap:1rem; justify-content:space-between; }
-
-/* ======= HERO SIMPLES LEGÍVEL ======= */
-.hero{
-  margin:1.25rem 0 2rem;
-  padding:3rem 1.25rem;
-  border-radius:16px;
-  background:#ffece4;           /* fundo suave */
-  color:#2c3e50;                 /* texto escuro = sempre legível */
-  text-align:center;
-}
-.hero h1{
-  margin:0 0 .5rem;
-  font-size: clamp(1.8rem, 2.5vw + 1rem, 3rem);
-  font-weight:800;
-  letter-spacing:-.02em;
-}
+/* Hero simples legível */
+.hero{ margin:20px 0 32px; padding:48px 20px; border-radius:16px; background:#ffe6dc; color:#2c3e50; text-align:center; }
+.hero h1{ margin:0 0 .5rem; font-size:clamp(1.8rem,2.5vw + 1rem,3rem); font-weight:800; letter-spacing:-.02em; }
 .hero p{ margin:0 0 1rem; color:#5b6570; }
 
-/* Espaçamento padrão entre seções */
+/* Seções */
 section h2{ margin:0 0 1rem; }
 section.container{ margin-bottom:2.25rem; }
