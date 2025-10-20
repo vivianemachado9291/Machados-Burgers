@@ -1,120 +1,167 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Cardápio — Machados Burgers</title>
-  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/reset.css" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/styles.css" />
 </head>
-<body>
-  <header>
-    <nav>
-      <a href="index.html" class="logo">Machados Burgers</a>
-      <ul>
-        <li><a href="index.html">Início</a></li>
-        <li><a href="cardapio.html">Cardápio</a></li>
-        <li><a href="contato.html">Contato</a></li>
+<body class="layout">
+  <header class="header">
+    <a class="brand" href="index.html">
+      <img src="img/logo.svg" alt="Logo Machados Burgers" class="brand-logo" />
+      <span class="brand-title">Machados Burgers</span>
+    </a>
+    <button class="hamburger" aria-label="Abrir menu" aria-controls="menu" aria-expanded="false">☰</button>
+    <nav class="menu" id="menu" aria-label="Menu principal">
+      <ul class="menu-lista">
+        <li class="menu-item"><a class="menu-link" href="index.html">Início</a></li>
+        <li class="menu-item"><a class="menu-link" href="cardapio.html">Cardápio</a></li>
+        <li class="menu-item"><a class="menu-link" href="contato.html">Contato</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section class="cardapio">
-      <h1>Nosso Cardápio</h1>
+  <main class="main container">
+    <h1>Cardápio</h1>
 
-      <div class="cards">
-        <div class="card">
-          <img src="img/cards/burger-classico.jpg" alt="Burger Clássico">
-          <h3>Burger Clássico</h3>
-          <p>100g de carne, queijo prato, picles e molho da casa.</p>
-          <span class="price">R$ 19,90</span>
+    <!-- Burgers -->
+    <h2 id="burgers" class="section-title">Burgers</h2>
+    <div class="grid-12 gap-lg">
+      <article class="card col-12 col-md-6 col-lg-3">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/classico.jpg" alt="Burger Clássico com queijo e picles" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Burger Clássico</h3>
+          <p class="card__text">100g de carne, queijo prato, picles e molho da casa.</p>
+          <span class="badge">R$ 19,90</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/cheddar-bacon.jpg" alt="Cheddar Bacon">
-          <h3>Cheddar Bacon</h3>
-          <p>Cheddar cremoso, bacon crocante e cebola caramelizada.</p>
-          <span class="price">R$ 24,90</span>
+      <article class="card col-12 col-md-6 col-lg-3">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/cheddar-bacon.jpg" alt="Cheddar Bacon com bacon crocante" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Cheddar Bacon</h3>
+          <p class="card__text">Cheddar cremoso, bacon crocante e cebola caramelizada.</p>
+          <span class="badge">R$ 24,90</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/veggie.jpg" alt="Veggie Burger">
-          <h3>Veggie Burger</h3>
-          <p>Burger de grão-de-bico, especiarias e maionese verde.</p>
-          <span class="price">R$ 22,90</span>
+      <article class="card col-12 col-md-6 col-lg-3">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/veggie.jpg" alt="Veggie Burger de grão-de-bico com rúcula" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Veggie Burger</h3>
+          <p class="card__text">Grão-de-bico, especiarias e maionese verde.</p>
+          <span class="badge badge-info">R$ 22,90</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/duplo-smash.jpg" alt="Duplo Smash">
-          <h3>Duplo Smash</h3>
-          <p>2x carne 100g, muito queijo e molho especial.</p>
-          <span class="price">R$ 29,90</span>
+      <article class="card col-12 col-md-6 col-lg-3">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/duplo-smash.jpg" alt="Duplo Smash com duas carnes e muito queijo" />
         </div>
-      </div>
-    </section>
+        <div class="card__body">
+          <h3 class="card__title">Duplo Smash</h3>
+          <p class="card__text">2x carne 100g, muito queijo e molho especial.</p>
+          <span class="badge badge-warning">R$ 29,90</span>
+        </div>
+      </article>
+    </div>
 
-    <section class="combos">
-      <h2>Combos</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/cards/combo-classico.jpg" alt="Combo Clássico com fritas e refrigerante">
-          <h3>Combo Clássico</h3>
-          <p>Burger Clássico + Fritas + Refrigerante</p>
-          <span class="price">R$ 32,90</span>
+    <!-- Combos -->
+    <h2 id="combos" class="section-title">Combos</h2>
+    <div class="grid-12 gap-lg">
+      <article class="card col-12 col-md-6 col-lg-4">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/combo-classico.jpg" alt="Combo Clássico: burger + fritas + refri" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Combo Clássico</h3>
+          <p class="card__text">Burger Clássico + fritas + refrigerante lata.</p>
+          <span class="badge badge-success">R$ 29,90</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/combo-bacon.jpg" alt="Combo Bacon com fritas e refrigerante">
-          <h3>Combo Bacon</h3>
-          <p>Cheddar Bacon + Fritas + Refrigerante</p>
-          <span class="price">R$ 36,90</span>
+      <article class="card col-12 col-md-6 col-lg-4">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/combo-bacon.jpg" alt="Combo Bacon: cheddar bacon + fritas + refri" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Combo Bacon</h3>
+          <p class="card__text">Cheddar Bacon + fritas + refrigerante lata.</p>
+          <span class="badge badge-success">R$ 34,90</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/combo-veggie.jpg" alt="Combo Veggie com fritas e refrigerante">
-          <h3>Combo Veggie</h3>
-          <p>Veggie Burger + Fritas + Refrigerante</p>
-          <span class="price">R$ 34,90</span>
+      <article class="card col-12 col-md-6 col-lg-4">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/combo-veggie.jpg" alt="Combo Veggie: veggie + fritas + refri" />
         </div>
-      </div>
-    </section>
+        <div class="card__body">
+          <h3 class="card__title">Combo Veggie</h3>
+          <p class="card__text">Veggie Burger + fritas + refrigerante lata.</p>
+          <span class="badge badge-success">R$ 32,90</span>
+        </div>
+      </article>
+    </div>
 
-    <section class="bebidas">
-      <h2>Bebidas</h2>
-      <div class="cards">
-        <div class="card">
-          <img src="img/cards/refri.jpg" alt="Refrigerante Lata">
-          <h3>Refrigerante</h3>
-          <p>Lata 350ml</p>
-          <span class="price">R$ 6,00</span>
+    <!-- Bebidas -->
+    <h2 id="bebidas" class="section-title">Bebidas</h2>
+    <div class="grid-12 gap-lg">
+      <article class="card col-6 col-md-4 col-lg-2">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/refrigerante.jpg" alt="Refrigerante lata" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Refrigerante</h3>
+          <span class="badge">R$ 6,00</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/suco.jpg" alt="Suco Natural">
-          <h3>Suco Natural</h3>
-          <p>Sabores variados</p>
-          <span class="price">R$ 8,00</span>
+      <article class="card col-6 col-md-4 col-lg-2">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/suco.jpg" alt="Suco natural" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Suco</h3>
+          <span class="badge">R$ 7,50</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/agua.jpg" alt="Água Mineral">
-          <h3>Água</h3>
-          <p>Com ou sem gás</p>
-          <span class="price">R$ 4,00</span>
+      <article class="card col-6 col-md-4 col-lg-2">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/agua.jpg" alt="Água Mineral" />
         </div>
+        <div class="card__body">
+          <h3 class="card__title">Água</h3>
+          <span class="badge">R$ 4,00</span>
+        </div>
+      </article>
 
-        <div class="card">
-          <img src="img/cards/cha-gelado.jpg" alt="Chá Gelado">
-          <h3>Chá Gelado</h3>
-          <p>Sabores variados</p>
-          <span class="price">R$ 7,00</span>
+      <article class="card col-6 col-md-4 col-lg-2">
+        <div class="card__media ratio-16x9">
+          <img src="img/cards/cha-gelado.jpg" alt="Chá gelado" />
         </div>
-      </div>
-    </section>
+        <div class="card__body">
+          <h3 class="card__title">Chá gelado</h3>
+          <span class="badge">R$ 6,50</span>
+        </div>
+      </article>
+    </div>
   </main>
 
-  <footer>
-    <p>© 2025 Machados Burgers — Todos os direitos reservados.</p>
+  <footer class="footer">
+    <p>© 2025 — Machados Burgers</p>
   </footer>
+  <script src="js/main.js"></script>
 </body>
 </html>
